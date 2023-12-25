@@ -135,7 +135,7 @@ void interrupt_atomic_violation_check::add_assertions(
   event_it e3,
   std::vector<exprt>& l_guards)
 {
-  assert(address(e1)== address(e3));
+  assert(address(e1)== address(e3));//确保e1和e3是对同一个变量进行操作
   std::vector<exprt> last_guards;
   for(auto e2:e2s){
       if(address(e1)!= address(e2)){
